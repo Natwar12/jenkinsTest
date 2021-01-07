@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage('Hello') {
+          steps{
+              echo 'Hello! This is enhancement Branch'
+            }
+        }
+        
+        stage('Checkout') {
+          steps{
+            echo 'checking out code'  
+            git 'https://github.com/Natwar12/jenkinsTest.git'
+            } 
+        }
+    }
+}
